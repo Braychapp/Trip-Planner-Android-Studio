@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Trip Planner</string>
+    <string name="trip_planner">Trip Planner</string>
+    <string name="startLocationString" />
+    <string name="starting_location">Starting Location</string>
+    <string name="destinationString" />
+    <string name="end_location">End Location</string>
+    <string name="next">NEXT</string>
 </resources>
