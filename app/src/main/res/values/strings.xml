@@ -6,4 +6,10 @@
     <string name="destinationString" />
     <string name="end_location">End Location</string>
     <string name="next">NEXT</string>
+    <string name="add_destinations">Add Destinations</string>
+    <string name="addButton">Add</string>
+    <string name="continueButton">Continue</string>
+    <string-array name="extra_destinations">
+        <!--here is where the additional destinations are going to go -->
+    </string-array>
 </resources>
