@@ -9,7 +9,14 @@
     <string name="add_destinations">Add Destinations</string>
     <string name="addButton">Add</string>
     <string name="continueButton">Continue</string>
-    <string name="test_id">Just Testing NVM this</string>
+    <string name="instructionAct3">Choose Preferred Transportation</string>
+    <string name="method_bus">Bus</string>
+    <string name="method_taxi">Taxi</string>
+    <string name="method_plane">Plane</string>
+    <string name="to_string">To: </string>
+    <string name="to_destination_string"></string>
+    <string name="from_string">From: </string>
+    <string name="from_destination_string"></string>
     <string-array name="extra_destinations">
         <!--here is where the additional destinations are going to go -->
     </string-array>
