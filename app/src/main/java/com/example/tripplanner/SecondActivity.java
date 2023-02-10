@@ -2,11 +2,13 @@ package com.example.tripplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,10 +23,13 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        TextView textView = (TextView) findViewById(R.id.allDestinations);
+        textView.append(Global.startLocation + " -> " + Global.endLocation);
         addButton = findViewById(R.id.addDestinationButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {onAddButtonClicked();}
+
         });
 
 
@@ -32,7 +37,9 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void onAddButtonClicked() {
-        EditText addDestination = findViewById(R.id.addDestination);
+
+
+        /*EditText addDestination = findViewById(R.id.addDestination);
         String destination = addDestination.getText().toString();
 
         String[] destinations = getResources().getStringArray(R.array.extra_destinations);
@@ -55,6 +62,6 @@ public class SecondActivity extends AppCompatActivity {
             }
         }
         builder.append(" -> ").append(endLocation);
-
+*/
     };
 }
