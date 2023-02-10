@@ -9,6 +9,7 @@
     <string name="add_destinations">Add Destinations</string>
     <string name="addButton">Add</string>
     <string name="continueButton">Continue</string>
+    <string name="test_id">Just Testing NVM this</string>
     <string-array name="extra_destinations">
         <!--here is where the additional destinations are going to go -->
     </string-array>
