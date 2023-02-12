@@ -1,3 +1,11 @@
+//=================================================================
+// File: ThirdActivity
+//
+//Purpose:  This Activity is the third window in our app.
+//          It asks the user to choose preferred method of travel.
+//
+//=================================================================
+
 package com.example.tripplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +25,7 @@ import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeListener, OnKeyListener {
 
-    // Button variables - still new to code so that the input its saved
+
     private RadioGroup transportRadioGroup;
     private RadioButton busRadioButton;
     private RadioButton taxiRadioButton;
@@ -33,7 +41,7 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
     private TextView endLocation_id2;
     private TextView startLocation_id2;
 
-    private Button contBtn_4Act;
+    private Button continueButton;
 
     private SharedPreferences savedValues;
 
@@ -49,7 +57,7 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
         // GET REFERENCES TO THE WIDGETS
         // ==============================
 
-        contBtn_4Act = findViewById(R.id.contBtn_4Act);
+        continueButton = findViewById(R.id.continueButton);
 
         endLocation_id = (TextView) findViewById(R.id.endLocation_id);
         startLocation_id = (TextView) findViewById(R.id.startLocation_id);
@@ -68,8 +76,8 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
         planeRadioButton2 = (RadioButton) findViewById(R.id.planeRadioButton2);
 
 
-        // Set the TextView with the global variable "endLocation & startLocation"
-        // First set of pairs
+        // SET THE TEXTVIEW WITH THE GLOBAL VARIABLE "ENDLOCATION & STARTLOCATION"
+        // FIRST SET OF PAIRS
         endLocation_id.setText(Global.endLocation);
         startLocation_id.setText(Global.startLocation);
         // Second set of pairs
@@ -82,8 +90,8 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
         transportRadioGroup2.setOnCheckedChangeListener(this);
         transportRadioGroup2.setOnKeyListener(this);
 
-        // Next Button to switch to next activity
-        contBtn_4Act.setOnClickListener(new View.OnClickListener() {
+        // NEXT BUTTON TO SWITCH TO NEXT ACTIVITY
+        continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openFourthActivity();
@@ -95,6 +103,7 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
 
     }
 
+    //Checking for Radio Button input
     @Override
     public void onCheckedChanged(RadioGroup transportRadioGroup, int ID) {
 
@@ -116,12 +125,14 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
 
     }
 
+
+
     @Override
     public boolean onKey(View view, int i, KeyEvent keyEvent) {
         return false;
     }
 
-
+    // Open fourth activity
     public void openFourthActivity() {
         Intent intent = new Intent(this, FourthActivity.class);
         startActivity(intent);

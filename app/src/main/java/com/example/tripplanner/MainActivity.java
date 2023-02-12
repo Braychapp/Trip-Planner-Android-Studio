@@ -1,3 +1,13 @@
+//==========================================================
+// File: MainActivity
+//
+//Purpose:  This Activity is the first window in our app.
+//          It asks the user for destination of travel.
+//
+//==========================================================
+
+
+
 package com.example.tripplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +27,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // ==============================
+        // GET REFERENCES TO THE WIDGETS
+        // ==============================
+
         button = findViewById(R.id.button);
+
+
+        // SET THE LISTENERS
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Open Second Activity
     public void openSecondActivity() {
         //this function puts the contents of both edit text widgets into string to be used later
         //it also goes to the second activity screen

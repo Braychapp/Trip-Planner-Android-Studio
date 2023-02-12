@@ -1,3 +1,12 @@
+//==============================================================
+// File: SecondActivity
+//
+//Purpose:  This Activity is the second window in our app.
+//          It provides the user with a website to book a hotel
+//
+//==============================================================
+
+
 package com.example.tripplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,10 +34,16 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+
+        // ==============================
+        // GET REFERENCES TO THE WIDGETS
+        // ==============================
         webView = findViewById(R.id.webview);
         webView.loadUrl("https://www.trivago.ca/");
 
         continueButton = findViewById(R.id.continueButton);
+
+        // SET THE LISTENERS
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +54,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
 
-
+    // Open Third Activity
     public void openThirdActivity() {
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
