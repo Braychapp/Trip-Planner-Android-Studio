@@ -6,7 +6,7 @@
     <string name="destinationString" />
     <string name="end_location">End Location</string>
     <string name="next">NEXT</string>
-    <string name="add_destinations">Add Destinations</string>
+    <string name="choose_dates">Choose Travel Dates</string>
     <string name="addButton">Add</string>
     <string name="continueButton">Continue</string>
     <string name="instructionAct3">Choose Preferred Transportation</string>
@@ -14,10 +14,8 @@
     <string name="method_taxi">Taxi</string>
     <string name="method_plane">Plane</string>
     <string name="to_string">To: </string>
-    <string name="to_destination_string"></string>
+    <string name="to_destination_string"/>
     <string name="from_string">From: </string>
-    <string name="from_destination_string"></string>
-    <string-array name="extra_destinations">
-        <!--here is where the additional destinations are going to go -->
-    </string-array>
+    <string name="from_destination_string"/>
+    <string name="view_hotels">View Hotels</string>
 </resources>

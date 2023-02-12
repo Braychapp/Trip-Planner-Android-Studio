@@ -3,6 +3,7 @@ package com.example.tripplanner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -34,6 +35,8 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
 
     private Button contBtn_4Act;
 
+    private SharedPreferences savedValues;
+
     private String methodTransport_To = "";
     private String methodTransport_From = "";
 
@@ -46,7 +49,7 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
         // GET REFERENCES TO THE WIDGETS
         // ==============================
 
-        contBtn_4Act = (Button) findViewById(R.id.contBtn_4Act);
+        contBtn_4Act = findViewById(R.id.contBtn_4Act);
 
         endLocation_id = (TextView) findViewById(R.id.endLocation_id);
         startLocation_id = (TextView) findViewById(R.id.startLocation_id);
@@ -79,7 +82,7 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
         transportRadioGroup2.setOnCheckedChangeListener(this);
         transportRadioGroup2.setOnKeyListener(this);
 
-
+        // Next Button to switch to next activity
         contBtn_4Act.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,12 +90,13 @@ public class ThirdActivity extends AppCompatActivity implements OnCheckedChangeL
             }
         });
 
-
+        // get SharedPreferences object
+        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
 
     }
 
     @Override
-    public void onCheckedChanged(RadioGroup radioGroup, int ID) {
+    public void onCheckedChanged(RadioGroup transportRadioGroup, int ID) {
 
         switch (ID) {
             case R.id.busRadioButton:

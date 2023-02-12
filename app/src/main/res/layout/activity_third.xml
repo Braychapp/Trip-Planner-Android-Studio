@@ -115,14 +115,15 @@
             android:id="@+id/taxiRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="@string/method_taxi" />
+            android:text="@string/method_taxi"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <RadioButton
             android:id="@+id/planeRadioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/method_plane" />
+            android:text="@string/method_plane"
+            tools:ignore="DuplicateSpeakableTextCheck" />
     </RadioGroup>
 
  <!-- Back ticket -->
@@ -207,7 +208,6 @@
             android:id="@+id/taxiRadioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/method_taxi" />
 
         <RadioButton
@@ -225,7 +225,7 @@
         android:layout_marginTop="64dp"
         android:text="@string/next"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup2" />/>
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
