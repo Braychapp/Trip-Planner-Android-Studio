@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Trip Planner</string>
+    <string name="trip_planner">Trip Planner</string>
+    <string name="startLocationString" />
+    <string name="starting_location">Starting Location</string>
+    <string name="destinationString" />
+    <string name="end_location">End Location</string>
+    <string name="next">NEXT</string>
+    <string name="add_destinations">Add Destinations</string>
+    <string name="addButton">Add</string>
+    <string name="continueButton">Continue</string>
+    <string name="instructionAct3">Choose Preferred Transportation</string>
+    <string name="method_bus">Bus</string>
+    <string name="method_taxi">Taxi</string>
+    <string name="method_plane">Plane</string>
+    <string name="to_string">To: </string>
+    <string name="to_destination_string"></string>
+    <string name="from_string">From: </string>
+    <string name="from_destination_string"></string>
+    <string name="view_hotels">View Hotels</string>
+    <string-array name="extra_destinations">
+        <!--here is where the additional destinations are going to go -->
+    </string-array>
+</resources>
