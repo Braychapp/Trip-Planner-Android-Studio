@@ -1,97 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="189dp"
-        android:layout_height="43dp"
-        android:text="@string/trip_planner"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/start_location" />
 
     <EditText
-        android:id="@+id/startLocation"
-        android:layout_width="242dp"
-        android:layout_height="92dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/startLocationString"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/destination"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:autofillHints=""
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="156dp"
-        android:layout_height="30dp"
-        android:text="@string/starting_location"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/startLocation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <EditText
-        android:id="@+id/destination"
-        android:layout_width="244dp"
-        android:layout_height="96dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/destinationString"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        android:autofillHints=""
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="117dp"
-        android:layout_height="37dp"
-        android:text="@string/end_location"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/destination"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startLocation" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/start_location"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startLocation" />
+        android:hint="Start location"
+        android:padding="16dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="16sp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="67dp"
-        android:layout_height="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041"
-        app:srcCompat="@drawable/photocards" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

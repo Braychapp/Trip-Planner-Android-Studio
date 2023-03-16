@@ -1,51 +1,43 @@
 package com.example.tripplanner;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private TextView startText;
+    private String startLocation;
+    private ArrayList<Trip> tripsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSecondActivity();
-            }
-        });
+        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
 
+        startText = findViewById(R.id.start_location);
+        startLocation = "New York City";
+        startText.setText(startLocation);
 
+        tripsList = new ArrayList<>();
+        tripsList.add(new Trip("Los Angeles", "Flight", "$250"));
+        tripsList.add(new Trip("Chicago", "Train", "$150"));
+        tripsList.add(new Trip("Miami", "Car", "$100"));
 
+        mAdapter = new TripAdapter(tripsList);
+        recyclerView.setAdapter(mAdapter);
     }
-
-    public void openSecondActivity() {
-        //this function puts the contents of both edit text widgets into string to be used later
-        //it also goes to the second activity screen
-        EditText startText = (EditText) findViewById(R.id.startLocation);
-        String startLocation = startText.getText().toString();
-        //^^this converts the edit text into a string
-        Global.startLocation = startLocation;
-        //^^this makes the string available to all activities
-
-        EditText endText = (EditText) findViewById(R.id.destination);
-        String endLocation = endText.getText().toString();
-
-        Global.endLocation = endLocation;
-
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }
-
 }
-
