@@ -39,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
         mAdapter = new TripAdapter(tripsList);
         recyclerView.setAdapter(mAdapter);
+        //wont commit without this
     }
 }
