@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+    <!-- Trip Planner Title -->
+    <TextView
+        android:id="@+id/titleAct3"
+        android:layout_width="189dp"
+        android:layout_height="43dp"
+        android:text="@string/trip_planner"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+
+    <!-- Choose Preferred  Transportation -->
+
+    <TextView
+        android:id="@+id/instructionAct3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleAct3"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/instructionAct3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleAct3" />
+
+    <!-- To: <Destination> -->
+    <TextView
+        android:id="@+id/toDestination_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/to_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionAct3" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/endLocation_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/to_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionAct3" />
+
+    <!-- From: <Destination> -->
+    <TextView
+        android:id="@+id/fromDestination_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/from_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionAct3" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/startLocation_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/from_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionAct3" />
+
+    <!-- Radio button groups-->
+    <RadioGroup
+        android:id="@+id/transportRadioGroup"
+        android:layout_width="264dp"
+        android:layout_height="86dp"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromDestination_id">
+
+
+        <RadioButton
+            android:id="@+id/busRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/method_bus" />
+
+        <RadioButton
+            android:id="@+id/taxiRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/method_taxi"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/planeRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/method_plane"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+    </RadioGroup>
+
+ <!-- Back ticket -->
+
+    <!-- To: <Destination> -->
+    <TextView
+        android:id="@+id/toDestination_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/to_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/endLocation_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/to_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup" />
+
+    <!-- From: <Destination> -->
+    <TextView
+        android:id="@+id/fromDestination_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/from_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/startLocation_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/from_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/transportRadioGroup2"
+        android:layout_width="264dp"
+        android:layout_height="86dp"
+        android:layout_below="@+id/instructionAct3"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromDestination_id2">
+
+
+        <RadioButton
+            android:id="@+id/busRadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/method_bus" />
+
+        <RadioButton
+            android:id="@+id/taxiRadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/method_taxi" />
+
+        <RadioButton
+            android:id="@+id/planeRadioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/method_plane" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup2" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="397dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transportRadioGroup"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FourthActivity">
+
+
+    <TextView
+        android:id="@+id/titleAct4"
+        android:layout_width="189dp"
+        android:layout_height="43dp"
+        android:text="@string/trip_planner"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/summaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleAct4"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/feedback"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleAct4" />
+
+
+    <!-- To: <Destination> -->
+    <TextView
+        android:id="@+id/toDestination_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/to_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/endLocation_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/to_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <!-- From: <Destination> -->
+    <TextView
+        android:id="@+id/fromDestination_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/from_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/startLocation_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/from_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <!-- Method of Transportation-->
+    <TextView
+        android:id="@+id/method_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/methodTransport"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/methodTransOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/from_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabel" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="70dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="349dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/methodTransOption"/>
+
+
+    <!-- To: <Destination> -->
+    <TextView
+        android:id="@+id/toDestination_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/to_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/endLocation_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/to_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <!-- From: <Destination> -->
+    <TextView
+        android:id="@+id/fromDestination_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/from_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/startLocation_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/from_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <!-- Method of Transportation-->
+    <TextView
+        android:id="@+id/method_id2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/methodTransport"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <!-- Empty TextView that will be filled after user input-->
+    <TextView
+        android:id="@+id/methodTransOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/summaryLabel"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/from_destination_string"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <Button
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="216dp"
+        android:text="@string/closeAPP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
