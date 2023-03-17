@@ -63,3 +63,4 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
         return tripList.size();
     }
 }
+//wont commit unless this is here
