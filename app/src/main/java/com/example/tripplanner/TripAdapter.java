@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
-
+import android.util.Log;
 
 public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
     private List<Trip> tripList;
@@ -34,6 +34,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.ViewHolder> {
             Global.startLocation = trip.getStartLocation();
             Global.endLocation = trip.getEndLocation();
             Global.date = trip.getDate();
+            Log.i(Global.MTAG, "Trip selected, Opening SecondActivity");
             view.getContext().startActivity(intent);
         }
     }

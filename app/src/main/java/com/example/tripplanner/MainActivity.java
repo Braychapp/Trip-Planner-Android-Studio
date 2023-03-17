@@ -3,13 +3,14 @@ package com.example.tripplanner;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.widget.TextView;
-
+import android.util.Log;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Log.i(Global.MTAG, "onCreate:MainActivity started");
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
